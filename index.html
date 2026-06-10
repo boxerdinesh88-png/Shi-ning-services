@@ -34,13 +34,14 @@
         section { padding: 60px 0; }
         img { max-width: 100%; height: auto; }
 
-        .header_section {
-            background: var(--primary-color);
-        }
-        .main_nav > li > a.active {
+        .main_nav > li > a.active,
+        .main_nav > li > a:hover {
             color: var(--secondary-color);
         }
-        .main_nav > li > a:hover {
+        .main_nav > li > a::after {
+            background: var(--secondary-color);
+        }
+        .main_nav .dropdown_menu a:hover {
             color: var(--secondary-color);
         }
 
