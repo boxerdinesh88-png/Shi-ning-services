@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="keywords" content="interior design, furniture services, Shining Services India" />
+    <meta name="description" content="Contact SHINING SERVICES INDIA PVT LTD for professional interior design and furniture services" />
+    <meta name="author" content="Shining Services India Pvt Ltd" />
+    <link rel="icon" href="images/favicon.png" type="image/gif" />
+    <title>Contact Us - SHINING SERVICES INDIA PVT LTD</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+   195    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <style>
+        /* Contact Form Specific Styles */
+        .contact_section {
+            background-color: #f8f9fa;
+            padding: 90px 0;
+        }
+        
+        .contact_section .heading_container {
+            margin-bottom: 30px;
+        }
+        
+        .contact_form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            padding: 10px 15px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        textarea.form-control {
+            height: 150px;
+        }
+        
+        .contact-btn {
+            background-color: #4b208c;
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            font-size: 16px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .contact-btn:hover {
+            background-color: #35156a;
+            transform: translateY(-3px);
+        }
+        
+        .map-container {
+            height: 450px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .contact-info-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+        
+        .contact-info-box h4 {
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #4b208c;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info-item i {
+            color: #4b208c;
+            font-size: 20px;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .contact-info-item p {
+            margin-bottom: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .contact_form {
+                margin-bottom: 30px;
+            }
+            
+            .map-container {
+                height: 300px;
+                margin-top: 30px;
+            }
+            
+            .contact-info-box {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header_section innerpage_header">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container">
+                <a class="navbar-brand" href="index.html">
+                    <span>SHINING SERVICES INDIA PVT LTD</span>
+                </a>
+                <div class="custom_menu-btn">
+                    <button onclick="openNav()" aria-label="Toggle navigation" aria-expanded="false" aria-controls="myNav">
+                        <span class="s-1"></span>
+                        <span class="s-2"></span>
+                        <span class="s-3"></span>
+                    </button>
+                    <div id="myNav" class="overlay">
+                        <div class="overlay-content">
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About</a>
+                            <a href="gallery.html">Gallery</a>
+                            <a href="service.html">Service</a>
+                            <a href="mission and vision.html">Mission and Vision</a>
+                            <a href="our client.html">Our Clients</a>
+                            <a href="./first chair.html">First Chair</a>
+                            <a href="contact.html" class="active">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact_section">
+        <div class="container">
+            <div class="heading_container">
+                <h2 class="text-center">Contact Us</h2>
+                <p class="text-center">We'd love to hear from you. Fill out the form below and we'll get back to you soon.</p>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="contact_form">
+                        <form action="contact.php" method="POST" id="contactForm">
+                            <div class="form-group">
+                                <label for="name" class="sr-only">Your Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="sr-only">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="sr-only">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="sr-only">Your Message</label>
+                                <textarea class="form-control" id="message" name="message" placeholder="Your Message" rows="5" required aria-required="true"></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="contact-btn">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="contact-info-box">
+                        <h4>Contact Information</h4>
+                        <div class="contact-info-item">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <p>
+                                <a href="https://maps.google.com/?q=G-80-3rd+Floor+Dilshad+Colony,+Dilshad+Garden,+New+Delhi-110095" target="_blank" rel="noopener noreferrer" aria-label="View location on Google Maps">
+                                    G-80-3rd Floor Dilshad Colony, Dilshad Garden, New Delhi-110095
+                                </a>
+                            </p>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <p>
+                                <a href="tel:+919873241384" aria-label="Call +91-9873241384">+91-9873241384</a><br>
+                                <a href="tel:+919818507689" aria-label="Call +91-9818507689">+91-9818507689</a><br>
+                                <a href="tel:+919873642170" aria-label="Call +91-9873642170">+91-9873642170</a>
+                            </p>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <p>
+                                <a href="mailto:shiningservicesindia@gmail.com" aria-label="Email shiningservicesindia@gmail.com">shiningservicesindia@gmail.com</a><br>
+                                <a href="mailto:shiningservice@gmail.com" aria-label="Email shiningservice@gmail.com">shiningservice@gmail.com</a>
+                            </p>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <p>Monday - Saturday: 9:00 AM - 6:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.9725609205683!2d77.31273007447676!3d28.679679275667826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb9c830fc3ed%3A0x86c5bfb071101aaa!2sDilshad%20Colony%2C%20Delhi%2C%20110095!5e0!3m2!1sen!2sin!4v1712355350847!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Dilshad Colony, Delhi"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info_section innerpage_info_section">
+        <div class="container">
+            <div class="row info_main_row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="info_insta">
+                        <h4>
+                            <a href="index.html" class="navbar-brand m-0 p-0">
+                                <span>SHINING SERVICES INDIA PVT LTD</span>
+                            </a>
+                        </h4>
+                        <p class="mb-0">
+                            MANUFACTURING, TRADING, REPAIR & MAINTENANCE OF FURNITURE SERVICES PROVIDER FOR INTERIOR DECORATION DESIGNER SERVICES, ARCHITECT SERVICES & WORK CONTRACT SERVICES
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="info_detail">
+                        <h4>Quick Links</h4>
+                        <p class="mb-0">
+                            <a href="index.html">Home</a><br>
+                            <a href="about.html">About</a><br>
+                            <a href="service.html">Services</a><br>
+                            <a href="contact.html">Contact</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h4>Contact Us</h4>
+                    <div class="info_contact">
+                        <a href="https://maps.google.com/?q=G-80-3rd+Floor+Dilshad+Colony,+Dilshad+Garden,+New+Delhi-110095" target="_blank" rel="noopener noreferrer" aria-label="View location on Google Maps">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <span>G-80-3rd Floor Dilshad Colony, Dilshad Garden, New Delhi-110095</span>
+                        </a>
+                        <a href="tel:+919873241384" aria-label="Call +91-9873241384">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <span>+91-9873241384<br>+91-9818507689<br>+91-9873642170</span>
+                        </a>
+                        <a href="mailto:shiningservicesindia@gmail.com" aria-label="Email shiningservicesindia@gmail.com">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <span>shiningservicesindia@gmail.com<br>shiningservice@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h4>Follow Us</h4>
+                    <div class="social_box">
+                        <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.twitter.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Follow us on LinkedIn">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.instagram.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer_section">
+        <div class="container">
+            <p>© <span id="displayYear"></span> Shining Services India Pvt Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        // Form validation script
+        $(document).ready(function() {
+            $('#contactForm').submit(function(event) {
+                var name = $('#name').val().trim();
+                var phone = $('#phone').val().trim();
+                var email = $('#email').val().trim();
+                var message = $('#message').val().trim();
+                
+                if (!name || !phone || !email || !message) {
+                    alert('Please fill all fields');
+                    event.preventDefault();
+                    return;
+                }
+                
+                var emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+                if (!emailPattern.test(email)) {
+                    alert('Please enter a valid email address');
+                    event.preventDefault();
+                    return;
+                }
+                
+                var phonePattern = /^[0-9]{10}$/;
+                if (!phonePattern.test(phone)) {
+                    alert('Please enter a valid 10-digit phone number');
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
