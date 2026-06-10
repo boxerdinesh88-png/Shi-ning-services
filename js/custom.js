@@ -10,6 +10,7 @@ getYear();
 // Mobile nav toggle
 function toggleNav() {
     document.getElementById("mainNav").classList.toggle("open");
+    document.querySelector(".navbar-toggler").classList.toggle("open");
 }
 
 // Mobile dropdown toggle
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (toggler) {
         toggler.addEventListener("click", function() {
             document.getElementById("mainNav").classList.toggle("open");
+            this.classList.toggle("open");
         });
     }
     // Mobile dropdown click
