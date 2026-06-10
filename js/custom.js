@@ -7,11 +7,33 @@ function getYear() {
 
 getYear();
 
-// Overlay menu
-function openNav() {
-    document.getElementById("myNav").classList.toggle("menu_width");
-    document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style");
+// Mobile nav toggle
+function toggleNav() {
+    document.getElementById("mainNav").classList.toggle("open");
 }
+
+// Mobile dropdown toggle
+document.addEventListener("DOMContentLoaded", function() {
+    var toggler = document.querySelector(".navbar-toggler");
+    if (toggler) {
+        toggler.addEventListener("click", function() {
+            document.getElementById("mainNav").classList.toggle("open");
+        });
+    }
+    // Mobile dropdown click
+    var dropdownToggles = document.querySelectorAll(".main_nav .dropdown_toggle");
+    dropdownToggles.forEach(function(toggle) {
+        toggle.addEventListener("click", function(e) {
+            if (window.innerWidth <= 991) {
+                e.preventDefault();
+                var menu = this.nextElementSibling;
+                if (menu && menu.classList) {
+                    menu.classList.toggle("open");
+                }
+            }
+        });
+    });
+});
 
 // Google Map (only if used in contact.html)
 function myMap() {

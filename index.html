@@ -36,50 +36,12 @@
 
         .header_section {
             background: var(--primary-color);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
-
-        .nav_container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
+        .main_nav > li > a.active {
+            color: var(--secondary-color);
         }
-
-        .company-name a {
-            color: var(--light-color);
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .custom_nav-container {
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-link {
-            color: var(--light-color);
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            padding: 8px 12px;
-        }
-
-        .nav-link:hover { color: var(--secondary-color); }
-
-        .navbar-toggler {
-            background: transparent;
-            border: none;
-            color: var(--light-color);
-            font-size: 1.5rem;
-            cursor: pointer;
-            display: none;
+        .main_nav > li > a:hover {
+            color: var(--secondary-color);
         }
 
         .slider_section {
@@ -337,7 +299,6 @@
             .heading_container h2 { font-size: 1.8rem; }
             .carousel-item { height: 300px; }
             .gallery_section .img-box { height: 180px; }
-            .company-name a { font-size: 1.2rem; }
         }
     </style>
 </head>
@@ -345,19 +306,32 @@
     <!-- Header Section -->
     <header class="header_section">
         <div class="nav_container">
-            <div class="company-name">
-                <a href="#" class="navbar-brand">SHINING SERVICES INDIA PVT LTD</a>
-            </div>
-            <nav class="custom_nav-container" id="navMenu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#gallery" class="nav-link">Gallery</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </nav>
-            <button class="navbar-toggler" type="button" onclick="toggleNav()">
-                <i class="fas fa-bars"></i>
+            <a class="navbar-brand" href="index.html">
+                <span>SHINING SERVICES INDIA PVT LTD</span>
+            </a>
+            <button class="navbar-toggler" onclick="toggleNav()" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
             </button>
+            <ul class="main_nav" id="mainNav">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li>
+                    <a href="#services" class="dropdown_toggle">Services</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown_toggle">More</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="mission and vision.html">Mission & Vision</a></li>
+                        <li><a href="our clint.html">Our Clients</a></li>
+                        <li><a href="first chair.html">First Chair</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </header>
 
@@ -748,7 +722,7 @@
     <script>
         // Toggle navigation for mobile
         function toggleNav() {
-            document.querySelector('.custom_nav-container').classList.toggle('active');
+            document.getElementById('mainNav').classList.toggle('open');
         }
 
         // Form validation

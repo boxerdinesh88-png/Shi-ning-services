@@ -16,32 +16,34 @@
   <link href="css/responsive.css" rel="stylesheet" />
 </head>
 <body>
-  <header class="header_section innerpage_header">
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg custom_nav-container">
-        <a class="navbar-brand" href="index.html">
-          <span>SHINING SERVICES INDIA PVT LTD</span>
-        </a>
-        <div class="custom_menu-btn">
-          <button onclick="openNav()">
-            <span class="s-1"></span>
-            <span class="s-2"></span>
-            <span class="s-3"></span>
-          </button>
-          <div id="myNav" class="overlay">
-            <div class="overlay-content">
-              <a href="index.html">Home</a>
-              <a href="about.html">About</a>
-              <a href="gallery.html">Gallery</a>
-              <a href="service.html">Service</a>
-              <a href="mission and vision.html">Mission and Vision</a>
-              <a href="our clint.html">Our Clients</a>
-              <a href="first chair.html">First Chair</a>
-              <a href="contact.html">Contact</a>
-            </div>
-          </div>
-        </div>
-      </nav>
+  <header class="header_section">
+    <div class="nav_container">
+      <a class="navbar-brand" href="index.html">
+        <span>SHINING SERVICES INDIA PVT LTD</span>
+      </a>
+      <button class="navbar-toggler" onclick="toggleNav()" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+      </button>
+      <ul class="main_nav" id="mainNav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="service.html" class="dropdown_toggle active">Services</a>
+          <ul class="dropdown_menu">
+            <li><a href="service.html">Our Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="dropdown_toggle">More</a>
+          <ul class="dropdown_menu">
+            <li><a href="mission and vision.html">Mission & Vision</a></li>
+            <li><a href="our clint.html">Our Clients</a></li>
+            <li><a href="first chair.html">First Chair</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
   </header>
 
