@@ -1045,6 +1045,14 @@ body {
   margin-bottom: 15px;
 }
 
+.info_section a {
+  color: #ffffff;
+}
+
+.info_section a:hover {
+  color: #e45441;
+}
+
 .info_section .info_contact a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1061,7 +1069,7 @@ body {
   width: 25px;
 }
 
-.info_section .info_contact a:hover:hover {
+.info_section .info_contact a:hover {
   color: #e45441;
 }
 
@@ -1183,13 +1191,14 @@ body {
 .footer_section {
   position: relative;
   text-align: center;
-  background: #2c3e50;
+  background: #262939;
 }
 
 .footer_section p {
   color: #ffffff;
   padding: 25px 0;
   margin: 0;
+  font-size: 14px;
 }
 
 .footer_section p a {
