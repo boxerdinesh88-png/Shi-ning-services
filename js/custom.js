@@ -7,21 +7,18 @@ function getYear() {
 
 getYear();
 
-// Mobile nav toggle
-function toggleNav() {
-    document.getElementById("mainNav").classList.toggle("open");
-    document.querySelector(".navbar-toggler").classList.toggle("open");
-}
-
-// Mobile dropdown toggle
+// Mobile nav and dropdown
 document.addEventListener("DOMContentLoaded", function() {
     var toggler = document.querySelector(".navbar-toggler");
-    if (toggler) {
+    var nav = document.getElementById("mainNav");
+
+    if (toggler && nav) {
         toggler.addEventListener("click", function() {
-            document.getElementById("mainNav").classList.toggle("open");
+            nav.classList.toggle("open");
             this.classList.toggle("open");
         });
     }
+
     // Mobile dropdown click
     var dropdownToggles = document.querySelectorAll(".main_nav .dropdown_toggle");
     dropdownToggles.forEach(function(toggle) {
@@ -40,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Google Map (only if used in contact.html)
 function myMap() {
     var mapProp = {
-        center: new google.maps.LatLng(28.679679, 77.312730), // Updated to Dilshad Colony, Delhi
+        center: new google.maps.LatLng(28.679679, 77.312730),
         zoom: 18,
     };
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);

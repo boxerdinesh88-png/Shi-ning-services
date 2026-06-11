@@ -51,7 +51,7 @@
             background: #f8f9fa;
         }
 
-        .carousel-item { height: 500px; }
+        .carousel-item { height: 600px; }
         .carousel-item img { width: 100%; height: 100%; object-fit: cover; }
 
         .carousel_btn_box {
@@ -269,8 +269,9 @@
             margin-bottom: 15px;
         }
 
-        @media (max-width: 1199px) { .carousel-item { height: 450px; } }
-        @media (max-width: 991px) {
+        @media (max-width: 1199px) { .carousel-item { height: 500px; } }
+        @media (max-width: 991px) { .carousel-item { height: 420px; } }
+        @media (max-width: 767px) {
             .navbar-toggler { display: block; }
             .custom_nav-container {
                 display: none;
@@ -310,7 +311,7 @@
             <a class="navbar-brand" href="index.html">
                 <span>SHINING SERVICES INDIA PVT LTD</span>
             </a>
-            <button class="navbar-toggler" onclick="toggleNav()" aria-label="Toggle navigation">
+            <button class="navbar-toggler" aria-label="Toggle navigation">
                 <div class="hamburger-icon">
                     <span></span>
                     <span></span>
@@ -719,12 +720,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
     <script src="js/custom.js"></script>
     <script>
-        // Toggle navigation for mobile
-        function toggleNav() {
-            document.getElementById('mainNav').classList.toggle('open');
-            document.querySelector('.navbar-toggler').classList.toggle('open');
-        }
-
         // Form validation
         function validateForm(event) {
             event.preventDefault();

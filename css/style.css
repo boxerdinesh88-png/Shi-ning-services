@@ -1119,7 +1119,7 @@ body {
 
 .gallery_slider .img-box {
   width: 100%;
-  height: 500px;
+  height: 600px;
   overflow: hidden;
 }
 
@@ -1167,15 +1167,15 @@ body {
   transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .gallery_slider .img-box {
-    height: 350px;
+    height: 400px;
   }
 }
 
 @media (max-width: 576px) {
   .gallery_slider .img-box {
-    height: 250px;
+    height: 280px;
   }
 }
 
