@@ -1183,10 +1183,11 @@ body {
 .footer_section {
   position: relative;
   text-align: center;
+  background: #2c3e50;
 }
 
 .footer_section p {
-  color: #000000;
+  color: #ffffff;
   padding: 25px 0;
   margin: 0;
 }
